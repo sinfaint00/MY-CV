@@ -1,75 +1,259 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Моє резюме</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Резюме — Євгеній</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0f0f0f;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
 
-        .card {
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
+.container {
+    max-width: 800px;
+    width: 100%;
+}
 
-        h1 {
-            margin-top: 0;
-            font-size: 32px;
-        }
+/* ===== HERO ===== */
+.hero {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 24px;
+}
 
-        p {
-            line-height: 1.6;
-            opacity: 0.85;
-        }
+.hero img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffd5;
+    margin-bottom: 15px;
+}
 
-        .links a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #00ffd5;
-            font-weight: bold;
-        }
+.hero h1 {
+    margin: 10px 0 5px;
+    font-size: 32px;
+}
 
-        .links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+.hero .meta {
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.hero .roles {
+    color: #00ffd5;
+    font-weight: bold;
+}
+
+/* ===== ACCORDION ===== */
+.section {
+    background: #1a1a1a;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 18px 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header:hover {
+    background: #222;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.section.open .arrow {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 22px;
+}
+
+.section.open .section-content {
+    padding: 15px 22px 22px;
+    max-height: 2000px;
+}
+
+.section-content p,
+.section-content li {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 18px;
+}
+</style>
 </head>
+
 <body>
+<div class="container">
 
-    <div class="card">
-        <h1>Євгеній</h1>
-        <p>
-            Початкове резюме у форматі сайту.  
-            Ця сторінка відкривається локально і через GitHub Pages.
-        </p>
+    <!-- HERO -->
+    <div class="hero">
+        <img src="https://via.placeholder.com/300" alt="Фото">
+        <h1>Євген Паламарчук</h1>
+        <div class="meta">25 років · Богуслав, Київська область</div>
+        <div class="roles">Менеджер · Sales · Marketing </div>
+    </div>
 
-        <p>
-            🔹 Навички: HTML, CSS, JavaScript  
-            <br>
-            🔹 Мета: рости як спеціаліст
-        </p>
-
-        <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Контакти</a>
+    <!-- SKILLS -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Навички та знання</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Знання англійської мови — B1+</li>
+                <li>Основи інтернет-маркетингу, SMM, запуск таргетованої реклами</li>
+                <li>Базові знання Google Ads, створення промо для реклами</li>
+                <li>Вміння продавати продукт та швидко вивчати його характеристики</li>
+                <li>Аналіз конкурентів, пошук сильних сторін продукту</li>
+                <li>Базове знання законодавства України</li>
+                <li>Навички ведення соціальних мереж</li>
+                <li>Базові знання HTML та CSS</li>
+                <li>Робота зі звуком: створення та обробка треків і озвучок</li>
+                <li>Дизайн фото, логотипів, робота в Canva</li>
+                <li>Водійське посвідчення категорії B (стаж понад 5 років)</li>
+            </ul>
         </div>
     </div>
 
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Освіта</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+            <p><strong>Черкаський національний університет ім. Богдана Хмельницького</strong></p>
+            <p>2017 – 2021</p>
+            <p>Спеціальність: Право</p>
+            <p>Освітній рівень: Бакалавр</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Досвід роботи</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+
+            <p><strong>Консультант — Вікторія-БУД</strong> (2018–2019)</p>
+            <ul>
+                <li>Продаж та консультування клієнтів</li>
+                <li>Робота з накладними</li>
+                <li>Управління погрузчиком</li>
+                <li>Складання меблів та інших товарів</li>
+                <li>Організаційні процеси</li>
+            </ul>
+
+            <p><strong>Менеджер / консультант — COOMANDOR</strong> (2021–2022)</p>
+            <ul>
+                <li>Консультація та доведення клієнтів до продажу</li>
+                <li>Переговори з фабриками та заводами</li>
+                <li>Супровід клієнта від консультації до монтажу</li>
+                <li>Розробка проектів вікон і балконів</li>
+                <li>Робота з рахунками та накладними</li>
+            </ul>
+
+            <p><strong>Менеджер — ROZETKA</strong> (2022 – теперішній час)</p>
+            <ul>
+                <li>Організація роботи відділення</li>
+                <li>Продаж та консультація клієнтів</li>
+                <li>Ведення Instagram-сторінки</li>
+                <li>Створення промо та запуск таргетованої реклами</li>
+                <li>Ведення документації</li>
+            </ul>
+
+            <p>Додатково: будівельні роботи, доставка (iPost), менеджер по роботі з англомовними клієнтами, запуск власних Instagram-магазинів.</p>
+        </div>
+    </div>
+
+    <!-- HOBBIES -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Хобі</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+            <p>Музика (понад 12 років), гра на гітарі, ударних та клавішних, створення електронної музики.</p>
+            <p>Спорт: тренажерний зал, біг, плавання, активний відпочинок.</p>
+            <p>Запуск бізнес-проєктів (дропшипінг: одяг, взуття, товари для дому).</p>
+            <p>Самоосвіта: книги, YouTube, Telegram-канали про продуктивність.</p>
+            <p>Рибалка, подорожі, автомобілі.</p>
+        </div>
+    </div>
+
+    <!-- STRENGTHS -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Сильні сторони</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Швидке навчання та адаптація</li>
+                <li>Пунктуальність і дотримання дедлайнів</li>
+                <li>Стресостійкість та оптимізм</li>
+                <li>Цілеспрямованість і доведення задач до кінця</li>
+                <li>Постійний розвиток та навчання</li>
+                <li>Комунікабельність і відповідальність</li>
+                <li>Критичне мислення</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="section">
+        <div class="section-header">
+            <h2>Контакти</h2>
+            <span class="arrow">⬇</span>
+        </div>
+        <div class="section-content">
+            <p>📞 +380 63 641 50 07</p>
+            <p>✉️ frankeshtayn00@gmail.com</p>
+            <p>Instagram: <strong>sinfaint</strong></p>
+            <p>Telegram: <strong>@sinfaint</strong></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.section-header').forEach(header => {
+    header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('open');
+    });
+});
+</script>
 </body>
 </html>
