@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<title>Про мене</title>
+<title>Резюме — Євген</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -15,6 +15,36 @@ body {
     justify-content: center;
     padding: 40px 10px;
 }
+
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #bbb;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.lang-switch a:hover {
+    background: #222;
+    color: #fff;
+}
+
+.lang-switch a.active {
+    color: #0f0f0f;
+    background: #00ffd5;
+    border-color: #00ffd5;
+    font-weight: bold;
+}
+
 
 :root {
     --accent-red: #c94b4b;
@@ -65,7 +95,10 @@ body {
     padding: 30px;
     text-align: center;
     margin-bottom: 24px;
+    
 }
+
+
 
 .hero img {
     width: 170px;
@@ -161,6 +194,10 @@ ul {
     <!-- HERO -->
     <div class="hero">
         <img src="https://raw.githubusercontent.com/sinfaint00/MY-CV/main/photo_2026-01-21_17-28-16.png" alt="Фото">
+         <div class="lang-switch">
+         <a href="https://sinfaint00.github.io/MY-CV/" class="active">UA</a>
+         <a href="https://sinfaint00.github.io/MY-CV-EN/">EN</a>
+         </div>
         <h1>Євген Паламарчук</h1>
         <div class="meta">25 років · Богуслав, Київська область</div>
         <div class="roles">Менеджер · Sales · Marketing </div>
