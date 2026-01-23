@@ -16,6 +16,43 @@ body {
     padding: 40px 10px;
 }
 
+:root {
+    --accent-red: #c94b4b;
+}
+
+/* fade + slide */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* фото — легкий zoom */
+.hero img {
+    animation: photoIn 0.9s ease forwards;
+}
+
+@keyframes photoIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 .container {
     max-width: 800px;
     width: 100%;
@@ -31,13 +68,14 @@ body {
 }
 
 .hero img {
-    width: 130px;
-    height: 130px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #00ffd5;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
+
 
 .hero h1 {
     margin: 10px 0 5px;
@@ -50,9 +88,12 @@ body {
 }
 
 .hero .roles {
-    color: #00ffd5;
+    color: var(--accent-red);
     font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(201, 75, 75, 0.25);
 }
+
 
 /* ===== ACCORDION ===== */
 .section {
@@ -83,9 +124,12 @@ body {
     transition: transform 0.3s ease;
 }
 
-.section.open .arrow {
-    transform: rotate(180deg);
+.section.open .section-content {
+    padding: 15px 22px 22px;
+    max-height: 2000px;
+    animation: fadeUp 0.4s ease;
 }
+
 
 .section-content {
     max-height: 0;
